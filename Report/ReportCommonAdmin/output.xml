@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220519 21:51:23.580" rpa="false" schemaversion="3">
+<suite id="s1" name="CommonAdminPageTC" source="D:\Fsoft\Robot Excercise\Assignment_Web_Trung_18_5\TestCases\AdminPageTC\CommonAdminPageTC\CommonAdminPageTC.robot">
+<test id="s1-t1" name="TC1" line="10">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:51:24.073" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7CC4F40&gt;</msg>
+<status status="PASS" starttime="20220519 21:51:24.072" endtime="20220519 21:51:24.073"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:51:24.073" endtime="20220519 21:51:24.073"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:51:24.074" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:51:24.074" endtime="20220519 21:51:28.752"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:51:28.754" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:51:28.753" endtime="20220519 21:51:32.533"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:51:32.534" endtime="20220519 21:51:32.664"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:51:32.664" endtime="20220519 21:51:32.669"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:51:32.677" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:51:32.670" endtime="20220519 21:51:32.677"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:51:32.677" endtime="20220519 21:51:32.678"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:32.669" endtime="20220519 21:51:32.679"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:24.071" endtime="20220519 21:51:32.679"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:32.682" endtime="20220519 21:51:32.727"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:32.728" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:51:32.727" endtime="20220519 21:51:32.963"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:32.681" endtime="20220519 21:51:32.963"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:32.680" endtime="20220519 21:51:32.964"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:32.966" endtime="20220519 21:51:33.011"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:33.012" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:51:33.011" endtime="20220519 21:51:33.138"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:32.965" endtime="20220519 21:51:33.138"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:32.964" endtime="20220519 21:51:33.139"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:33.140" endtime="20220519 21:51:33.173"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:33.174" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:51:33.173" endtime="20220519 21:51:35.406"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:33.140" endtime="20220519 21:51:35.406"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:33.139" endtime="20220519 21:51:35.407"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:32.680" endtime="20220519 21:51:35.407"/>
+</kw>
+<kw name="Verify Icon Browser Website" library="CommonAdminKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${browserBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220519 21:51:35.467" level="INFO">Current page contains element 'xpath://a[@title='Browse Website']'.</msg>
+<status status="PASS" starttime="20220519 21:51:35.409" endtime="20220519 21:51:35.467"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${browserBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:35.469" endtime="20220519 21:51:35.509"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:35.511" level="INFO">Clicking element 'xpath://a[@title='Browse Website']'.</msg>
+<status status="PASS" starttime="20220519 21:51:35.510" endtime="20220519 21:51:35.675"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:35.468" endtime="20220519 21:51:35.676"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:35.408" endtime="20220519 21:51:35.676"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:51:35.696" level="INFO">${curURL} = https://ecommerce.anhtester.com/admin</msg>
+<status status="PASS" starttime="20220519 21:51:35.678" endtime="20220519 21:51:35.696"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:51:35.697" endtime="20220519 21:51:35.698"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:35.677" endtime="20220519 21:51:35.699"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:51:35.701" endtime="20220519 21:51:38.199"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:35.700" endtime="20220519 21:51:38.200"/>
+</kw>
+<doc>User click on button 'Browser Website'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:51:24.070" endtime="20220519 21:51:38.201"/>
+</test>
+<test id="s1-t2" name="TC2" line="17">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:51:38.213" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D26C20&gt;</msg>
+<status status="PASS" starttime="20220519 21:51:38.211" endtime="20220519 21:51:38.213"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:51:38.213" endtime="20220519 21:51:38.215"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:51:38.217" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:51:38.216" endtime="20220519 21:51:42.740"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:51:42.742" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:51:42.740" endtime="20220519 21:51:44.467"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:51:44.468" endtime="20220519 21:51:44.635"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:51:44.636" endtime="20220519 21:51:44.640"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:51:44.651" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:51:44.641" endtime="20220519 21:51:44.651"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:51:44.651" endtime="20220519 21:51:44.653"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:44.641" endtime="20220519 21:51:44.653"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:38.210" endtime="20220519 21:51:44.654"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:44.658" endtime="20220519 21:51:44.711"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:44.712" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:51:44.711" endtime="20220519 21:51:44.947"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:44.656" endtime="20220519 21:51:44.947"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:44.655" endtime="20220519 21:51:44.948"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:44.951" endtime="20220519 21:51:45.010"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:45.011" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:51:45.010" endtime="20220519 21:51:45.198"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:44.949" endtime="20220519 21:51:45.198"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:44.948" endtime="20220519 21:51:45.199"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:45.201" endtime="20220519 21:51:45.253"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:45.254" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:51:45.253" endtime="20220519 21:51:48.998"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:45.200" endtime="20220519 21:51:48.998"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:45.199" endtime="20220519 21:51:48.999"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:44.654" endtime="20220519 21:51:48.999"/>
+</kw>
+<kw name="Verify Button Clear Cache" library="CommonAdminKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${clearCacheBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220519 21:51:49.049" level="INFO">Current page contains element 'xpath://span[@class='fw-500 ml-1 mr-0 d-none d-md-block']'.</msg>
+<status status="PASS" starttime="20220519 21:51:49.002" endtime="20220519 21:51:49.049"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${clearCacheBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:51:49.051" endtime="20220519 21:51:49.098"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:49.099" level="INFO">Clicking element 'xpath://span[@class='fw-500 ml-1 mr-0 d-none d-md-block']'.</msg>
+<status status="PASS" starttime="20220519 21:51:49.098" endtime="20220519 21:51:50.744"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:49.050" endtime="20220519 21:51:50.744"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220519 21:51:52.759" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220519 21:51:50.745" endtime="20220519 21:51:52.759"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${cacheCheck}</var>
+<arg>${cacheTxt}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:51:52.804" level="INFO">${cacheCheck} = Cache cleared successfully</msg>
+<status status="PASS" starttime="20220519 21:51:52.760" endtime="20220519 21:51:52.804"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cacheCheck}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 21:51:52.805" level="INFO">Cache cleared successfully</msg>
+<status status="PASS" starttime="20220519 21:51:52.804" endtime="20220519 21:51:52.805"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:49.001" endtime="20220519 21:51:52.805"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:51:52.807" endtime="20220519 21:51:56.904"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:52.806" endtime="20220519 21:51:56.905"/>
+</kw>
+<doc>User click on button 'Clear Cache'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:51:38.207" endtime="20220519 21:51:56.906"/>
+</test>
+<test id="s1-t3" name="TC3" line="23">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:51:56.918" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4C6A0&gt;</msg>
+<status status="PASS" starttime="20220519 21:51:56.917" endtime="20220519 21:51:56.919"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:51:56.920" endtime="20220519 21:51:56.921"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:51:56.923" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:51:56.922" endtime="20220519 21:52:01.365"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:52:01.366" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:52:01.366" endtime="20220519 21:52:04.453"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:04.453" endtime="20220519 21:52:04.591"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:04.591" endtime="20220519 21:52:04.596"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:52:04.606" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:52:04.598" endtime="20220519 21:52:04.606"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:52:04.606" endtime="20220519 21:52:04.607"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:04.597" endtime="20220519 21:52:04.608"/>
+</kw>
+<status status="PASS" starttime="20220519 21:51:56.916" endtime="20220519 21:52:04.608"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:04.613" endtime="20220519 21:52:04.656"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:04.657" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:52:04.657" endtime="20220519 21:52:04.869"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:04.612" endtime="20220519 21:52:04.869"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:04.610" endtime="20220519 21:52:04.870"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:04.872" endtime="20220519 21:52:04.919"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:04.920" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:52:04.919" endtime="20220519 21:52:05.100"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:04.871" endtime="20220519 21:52:05.100"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:04.870" endtime="20220519 21:52:05.101"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:05.103" endtime="20220519 21:52:05.156"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:05.157" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:52:05.156" endtime="20220519 21:52:07.750"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:05.102" endtime="20220519 21:52:07.751"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:05.101" endtime="20220519 21:52:07.751"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:04.609" endtime="20220519 21:52:07.752"/>
+</kw>
+<kw name="Verify Flag" library="CommonAdminKW">
+<kw name="Click For Element" library="common">
+<arg>${flagIcon}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:07.755" endtime="20220519 21:52:07.832"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:07.834" level="INFO">Clicking element 'xpath://div[@id='lang-change']//span[contains(@class,'btn btn-icon')]'.</msg>
+<status status="PASS" starttime="20220519 21:52:07.833" endtime="20220519 21:52:07.933"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:07.754" endtime="20220519 21:52:07.933"/>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<var>${icon}</var>
+<arg>${flag}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220519 21:52:07.978" level="INFO">${icon} = 2</msg>
+<status status="PASS" starttime="20220519 21:52:07.934" endtime="20220519 21:52:07.978"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${icon}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 21:52:07.979" level="INFO">2</msg>
+<status status="PASS" starttime="20220519 21:52:07.979" endtime="20220519 21:52:07.979"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:07.753" endtime="20220519 21:52:07.980"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:52:07.988" endtime="20220519 21:52:10.457"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:07.987" endtime="20220519 21:52:10.458"/>
+</kw>
+<doc>User select flag on the screen 'Dashboard'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:51:56.913" endtime="20220519 21:52:10.459"/>
+</test>
+<test id="s1-t4" name="TC4" line="29">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:52:10.470" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4CDC0&gt;</msg>
+<status status="PASS" starttime="20220519 21:52:10.469" endtime="20220519 21:52:10.471"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:52:10.471" endtime="20220519 21:52:10.473"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:52:10.476" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:52:10.474" endtime="20220519 21:52:14.896"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:52:14.897" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:52:14.896" endtime="20220519 21:52:18.501"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:18.501" endtime="20220519 21:52:18.627"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:18.627" endtime="20220519 21:52:18.631"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:52:18.640" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:52:18.632" endtime="20220519 21:52:18.641"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:52:18.641" endtime="20220519 21:52:18.642"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:18.631" endtime="20220519 21:52:18.642"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:10.468" endtime="20220519 21:52:18.643"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:18.645" endtime="20220519 21:52:18.688"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:18.691" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:52:18.690" endtime="20220519 21:52:18.895"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:18.644" endtime="20220519 21:52:18.895"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:18.644" endtime="20220519 21:52:18.896"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:18.899" endtime="20220519 21:52:18.944"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:18.945" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:52:18.945" endtime="20220519 21:52:19.091"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:18.897" endtime="20220519 21:52:19.092"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:18.896" endtime="20220519 21:52:19.092"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:19.093" endtime="20220519 21:52:19.124"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:19.125" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:52:19.125" endtime="20220519 21:52:21.295"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:19.093" endtime="20220519 21:52:21.296"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:19.092" endtime="20220519 21:52:21.296"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:18.643" endtime="20220519 21:52:21.297"/>
+</kw>
+<kw name="Verify 12 Product" library="CommonAdminKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${productCheck}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220519 21:52:21.380" level="INFO">Current page contains element 'xpath://h6[normalize-space()='Top 12 Products']'.</msg>
+<status status="PASS" starttime="20220519 21:52:21.311" endtime="20220519 21:52:21.381"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product}</var>
+<arg>${productCheck}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:21.473" level="INFO">${product} = Top 12 Products</msg>
+<status status="PASS" starttime="20220519 21:52:21.381" endtime="20220519 21:52:21.473"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${product}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 21:52:21.474" level="INFO">Top 12 Products</msg>
+<status status="PASS" starttime="20220519 21:52:21.474" endtime="20220519 21:52:21.474"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:21.310" endtime="20220519 21:52:21.475"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:52:21.478" endtime="20220519 21:52:23.958"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:21.476" endtime="20220519 21:52:23.959"/>
+</kw>
+<doc>Verify product on the screen</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:52:10.464" endtime="20220519 21:52:23.960"/>
+</test>
+<test id="s1-t5" name="TC5" line="35">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:52:23.971" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4D210&gt;</msg>
+<status status="PASS" starttime="20220519 21:52:23.970" endtime="20220519 21:52:23.972"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:52:23.972" endtime="20220519 21:52:23.975"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:52:23.977" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:52:23.975" endtime="20220519 21:52:28.708"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:52:28.709" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:52:28.708" endtime="20220519 21:52:33.276"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:33.276" endtime="20220519 21:52:33.413"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:33.413" endtime="20220519 21:52:33.419"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:52:33.426" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:52:33.420" endtime="20220519 21:52:33.427"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:52:33.427" endtime="20220519 21:52:33.428"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.419" endtime="20220519 21:52:33.428"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:23.969" endtime="20220519 21:52:33.429"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:33.431" endtime="20220519 21:52:33.474"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:33.475" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:52:33.474" endtime="20220519 21:52:33.651"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.430" endtime="20220519 21:52:33.651"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.430" endtime="20220519 21:52:33.651"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:33.653" endtime="20220519 21:52:33.690"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:33.690" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:52:33.690" endtime="20220519 21:52:33.814"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.652" endtime="20220519 21:52:33.814"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.652" endtime="20220519 21:52:33.815"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:33.817" endtime="20220519 21:52:33.849"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:33.850" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:52:33.849" endtime="20220519 21:52:35.904"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.816" endtime="20220519 21:52:35.904"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.815" endtime="20220519 21:52:35.905"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:33.429" endtime="20220519 21:52:35.905"/>
+</kw>
+<kw name="Verify icon '&lt;'" library="CommonAdminKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${iconRight}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220519 21:52:35.974" level="INFO">Current page contains element 'xpath://i[@class='las la-angle-right']'.</msg>
+<status status="PASS" starttime="20220519 21:52:35.909" endtime="20220519 21:52:35.974"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${iconRight}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:35.976" endtime="20220519 21:52:36.017"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:36.018" level="INFO">Clicking element 'xpath://i[@class='las la-angle-right']'.</msg>
+<status status="PASS" starttime="20220519 21:52:36.017" endtime="20220519 21:52:36.100"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:35.975" endtime="20220519 21:52:36.100"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:35.908" endtime="20220519 21:52:36.101"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:52:36.103" endtime="20220519 21:52:38.745"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:36.102" endtime="20220519 21:52:38.746"/>
+</kw>
+<doc>Verify and click on button '&lt;'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:52:23.966" endtime="20220519 21:52:38.747"/>
+</test>
+<test id="s1-t6" name="TC6" line="41">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:52:38.761" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4DF00&gt;</msg>
+<status status="PASS" starttime="20220519 21:52:38.759" endtime="20220519 21:52:38.761"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:52:38.762" endtime="20220519 21:52:38.763"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:52:38.765" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:52:38.764" endtime="20220519 21:52:43.306"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:52:43.307" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:52:43.306" endtime="20220519 21:52:46.938"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:46.939" endtime="20220519 21:52:47.065"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:52:47.066" endtime="20220519 21:52:47.075"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:52:47.084" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:52:47.076" endtime="20220519 21:52:47.085"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:52:47.085" endtime="20220519 21:52:47.086"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.075" endtime="20220519 21:52:47.086"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:38.757" endtime="20220519 21:52:47.086"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:47.090" endtime="20220519 21:52:47.140"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:47.141" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:52:47.140" endtime="20220519 21:52:47.375"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.089" endtime="20220519 21:52:47.376"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.088" endtime="20220519 21:52:47.376"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:47.378" endtime="20220519 21:52:47.436"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:47.437" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:52:47.437" endtime="20220519 21:52:47.567"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.377" endtime="20220519 21:52:47.567"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.376" endtime="20220519 21:52:47.568"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:47.570" endtime="20220519 21:52:47.602"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:47.603" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:52:47.602" endtime="20220519 21:52:49.718"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.569" endtime="20220519 21:52:49.719"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.568" endtime="20220519 21:52:49.719"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:47.087" endtime="20220519 21:52:49.720"/>
+</kw>
+<kw name="Verify icon '&gt;'" library="CommonAdminKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${iconLeft}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220519 21:52:49.769" level="INFO">Current page contains element 'xpath://i[@class='las la-angle-left']'.</msg>
+<status status="PASS" starttime="20220519 21:52:49.722" endtime="20220519 21:52:49.770"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${iconLeft}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:52:49.771" endtime="20220519 21:52:49.843"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:52:49.845" level="INFO">Clicking element 'xpath://i[@class='las la-angle-left']'.</msg>
+<status status="PASS" starttime="20220519 21:52:49.844" endtime="20220519 21:52:49.946"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:49.770" endtime="20220519 21:52:49.946"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:49.721" endtime="20220519 21:52:49.946"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:52:49.949" endtime="20220519 21:52:53.983"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:49.947" endtime="20220519 21:52:53.984"/>
+</kw>
+<doc>Verify and click on button '&gt;'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:52:38.754" endtime="20220519 21:52:53.985"/>
+</test>
+<test id="s1-t7" name="TC7" line="47">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:52:53.997" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4E830&gt;</msg>
+<status status="PASS" starttime="20220519 21:52:53.995" endtime="20220519 21:52:53.997"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:52:53.997" endtime="20220519 21:52:53.999"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:52:54.002" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:52:54.000" endtime="20220519 21:52:58.438"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:52:58.440" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:52:58.439" endtime="20220519 21:53:02.074"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:02.074" endtime="20220519 21:53:02.214"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:02.215" endtime="20220519 21:53:02.220"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:02.231" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:53:02.220" endtime="20220519 21:53:02.231"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:02.232" endtime="20220519 21:53:02.233"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.220" endtime="20220519 21:53:02.234"/>
+</kw>
+<status status="PASS" starttime="20220519 21:52:53.994" endtime="20220519 21:53:02.234"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:02.237" endtime="20220519 21:53:02.284"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:02.285" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:53:02.284" endtime="20220519 21:53:02.518"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.236" endtime="20220519 21:53:02.518"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.235" endtime="20220519 21:53:02.519"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:02.521" endtime="20220519 21:53:02.567"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:02.567" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:53:02.567" endtime="20220519 21:53:02.716"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.520" endtime="20220519 21:53:02.716"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.519" endtime="20220519 21:53:02.716"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:02.718" endtime="20220519 21:53:02.751"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:02.752" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:53:02.751" endtime="20220519 21:53:04.902"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.717" endtime="20220519 21:53:04.903"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.716" endtime="20220519 21:53:04.903"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:02.235" endtime="20220519 21:53:04.904"/>
+</kw>
+<kw name="Search menu" library="CommonAdminKW">
+<arg>Products</arg>
+<kw name="Input For Text" library="common">
+<arg>${searchTxt}</arg>
+<arg>${searchInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:04.909" endtime="20220519 21:53:05.040"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:05.042" level="INFO">Typing text 'Products' into text field 'xpath://input[@id='menu-search']'.</msg>
+<status status="PASS" starttime="20220519 21:53:05.041" endtime="20220519 21:53:05.482"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:04.908" endtime="20220519 21:53:05.483"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:04.906" endtime="20220519 21:53:05.483"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:53:05.485" endtime="20220519 21:53:08.023"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:05.484" endtime="20220519 21:53:08.024"/>
+</kw>
+<doc>Search menu in left corner of the screen</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:52:53.991" endtime="20220519 21:53:08.025"/>
+</test>
+<test id="s1-t8" name="TC8" line="53">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:53:08.037" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4F070&gt;</msg>
+<status status="PASS" starttime="20220519 21:53:08.035" endtime="20220519 21:53:08.037"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:53:08.037" endtime="20220519 21:53:08.039"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:53:08.041" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:53:08.040" endtime="20220519 21:53:12.498"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:53:12.499" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:53:12.498" endtime="20220519 21:53:16.149"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:16.149" endtime="20220519 21:53:16.293"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:16.293" endtime="20220519 21:53:16.298"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:16.312" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:53:16.299" endtime="20220519 21:53:16.312"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:16.313" endtime="20220519 21:53:16.313"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.299" endtime="20220519 21:53:16.314"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:08.034" endtime="20220519 21:53:16.314"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:16.317" endtime="20220519 21:53:16.367"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:16.368" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:53:16.367" endtime="20220519 21:53:16.577"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.316" endtime="20220519 21:53:16.578"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.315" endtime="20220519 21:53:16.578"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:16.580" endtime="20220519 21:53:16.620"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:16.621" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:53:16.620" endtime="20220519 21:53:16.757"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.579" endtime="20220519 21:53:16.757"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.578" endtime="20220519 21:53:16.758"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:16.760" endtime="20220519 21:53:16.792"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:16.792" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:53:16.792" endtime="20220519 21:53:18.977"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.759" endtime="20220519 21:53:18.978"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.758" endtime="20220519 21:53:18.979"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:16.314" endtime="20220519 21:53:18.979"/>
+</kw>
+<kw name="Child Menu Click" library="CommonAdminKW">
+<arg>Add New Product</arg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${checkMenuProduct}</var>
+<arg>${menuProduct}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:19.099" level="INFO">${checkMenuProduct} = Products</msg>
+<status status="PASS" starttime="20220519 21:53:18.983" endtime="20220519 21:53:19.099"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${checkMenuProduct}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 21:53:19.100" level="INFO">Products</msg>
+<status status="PASS" starttime="20220519 21:53:19.100" endtime="20220519 21:53:19.100"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${menuProduct}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:19.102" endtime="20220519 21:53:19.142"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:19.143" level="INFO">Clicking element 'xpath://span[normalize-space()='Products']'.</msg>
+<status status="PASS" starttime="20220519 21:53:19.142" endtime="20220519 21:53:19.257"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:19.101" endtime="20220519 21:53:19.257"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${child}</var>
+<arg>xpath://span[normalize-space()='${menuChild}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220519 21:53:19.259" level="INFO">${child} = xpath://span[normalize-space()='Add New Product']</msg>
+<status status="PASS" starttime="20220519 21:53:19.257" endtime="20220519 21:53:19.259"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${child}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:19.260" endtime="20220519 21:53:19.349"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:19.350" level="INFO">Clicking element 'xpath://span[normalize-space()='Add New Product']'.</msg>
+<status status="PASS" starttime="20220519 21:53:19.349" endtime="20220519 21:53:20.882"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:19.259" endtime="20220519 21:53:20.883"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:20.894" level="INFO">${curURL} = https://ecommerce.anhtester.com/admin/products/create</msg>
+<status status="PASS" starttime="20220519 21:53:20.883" endtime="20220519 21:53:20.894"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:20.895" endtime="20220519 21:53:20.895"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:20.883" endtime="20220519 21:53:20.896"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:18.981" endtime="20220519 21:53:20.896"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:53:20.898" endtime="20220519 21:53:23.426"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:20.897" endtime="20220519 21:53:23.427"/>
+</kw>
+<doc>User click on 'Add New Product' in the menu</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:53:08.031" endtime="20220519 21:53:23.428"/>
+</test>
+<test id="s1-t9" name="TC9" line="59">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:53:23.439" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4EB00&gt;</msg>
+<status status="PASS" starttime="20220519 21:53:23.438" endtime="20220519 21:53:23.440"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:53:23.441" endtime="20220519 21:53:23.442"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:53:23.444" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:53:23.443" endtime="20220519 21:53:27.897"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:53:27.898" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:53:27.898" endtime="20220519 21:53:29.105"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:29.106" endtime="20220519 21:53:29.267"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:29.268" endtime="20220519 21:53:29.273"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:29.284" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:53:29.274" endtime="20220519 21:53:29.284"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:29.285" endtime="20220519 21:53:29.286"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.273" endtime="20220519 21:53:29.287"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:23.437" endtime="20220519 21:53:29.287"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:29.293" endtime="20220519 21:53:29.341"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:29.342" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:53:29.341" endtime="20220519 21:53:29.577"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.292" endtime="20220519 21:53:29.577"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.291" endtime="20220519 21:53:29.578"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:29.581" endtime="20220519 21:53:29.634"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:29.635" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:53:29.634" endtime="20220519 21:53:29.814"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.579" endtime="20220519 21:53:29.815"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.578" endtime="20220519 21:53:29.815"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:29.818" endtime="20220519 21:53:29.865"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:29.866" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:53:29.865" endtime="20220519 21:53:33.510"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.817" endtime="20220519 21:53:33.511"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.816" endtime="20220519 21:53:33.512"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:29.290" endtime="20220519 21:53:33.512"/>
+</kw>
+<kw name="Child Menu Click" library="CommonAdminKW">
+<arg>All products</arg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${checkMenuProduct}</var>
+<arg>${menuProduct}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:33.622" level="INFO">${checkMenuProduct} = Products</msg>
+<status status="PASS" starttime="20220519 21:53:33.522" endtime="20220519 21:53:33.622"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${checkMenuProduct}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 21:53:33.624" level="INFO">Products</msg>
+<status status="PASS" starttime="20220519 21:53:33.623" endtime="20220519 21:53:33.624"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${menuProduct}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:33.626" endtime="20220519 21:53:33.655"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:33.656" level="INFO">Clicking element 'xpath://span[normalize-space()='Products']'.</msg>
+<status status="PASS" starttime="20220519 21:53:33.656" endtime="20220519 21:53:33.753"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:33.625" endtime="20220519 21:53:33.754"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${child}</var>
+<arg>xpath://span[normalize-space()='${menuChild}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220519 21:53:33.754" level="INFO">${child} = xpath://span[normalize-space()='All products']</msg>
+<status status="PASS" starttime="20220519 21:53:33.754" endtime="20220519 21:53:33.755"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${child}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:33.756" endtime="20220519 21:53:33.803"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:33.804" level="INFO">Clicking element 'xpath://span[normalize-space()='All products']'.</msg>
+<status status="PASS" starttime="20220519 21:53:33.803" endtime="20220519 21:53:35.187"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:33.755" endtime="20220519 21:53:35.187"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:35.254" level="INFO">${curURL} = https://ecommerce.anhtester.com/admin/products/all</msg>
+<status status="PASS" starttime="20220519 21:53:35.189" endtime="20220519 21:53:35.255"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:35.255" endtime="20220519 21:53:35.258"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:35.188" endtime="20220519 21:53:35.259"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:33.521" endtime="20220519 21:53:35.260"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:53:35.263" endtime="20220519 21:53:37.773"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:35.262" endtime="20220519 21:53:37.773"/>
+</kw>
+<doc>User click on 'All products' in the menu</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:53:23.434" endtime="20220519 21:53:37.774"/>
+</test>
+<test id="s1-t10" name="TC10" line="65">
+<kw name="Open My Browser" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 21:53:37.785" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002E3F7D4F400&gt;</msg>
+<status status="PASS" starttime="20220519 21:53:37.784" endtime="20220519 21:53:37.786"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_extension</arg>
+<arg>D:\\Fsoft\\Robot Excercise\\Assignment_Web_Trung_18_5\\PageObjects\\Common/../../Extension/ublock.crx</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220519 21:53:37.786" endtime="20220519 21:53:37.788"/>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220519 21:53:37.790" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220519 21:53:37.789" endtime="20220519 21:53:42.235"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220519 21:53:42.236" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220519 21:53:42.236" endtime="20220519 21:53:46.239"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:46.239" endtime="20220519 21:53:46.367"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 21:53:46.367" endtime="20220519 21:53:46.371"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:46.378" level="INFO">${curURL} = https://ecommerce.anhtester.com/login</msg>
+<status status="PASS" starttime="20220519 21:53:46.372" endtime="20220519 21:53:46.378"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:46.378" endtime="20220519 21:53:46.379"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.372" endtime="20220519 21:53:46.379"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:37.783" endtime="20220519 21:53:46.380"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>tienthanhxh2000@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:46.382" endtime="20220519 21:53:46.423"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:46.425" level="INFO">Typing text 'tienthanhxh2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
+<status status="PASS" starttime="20220519 21:53:46.423" endtime="20220519 21:53:46.614"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.381" endtime="20220519 21:53:46.614"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.381" endtime="20220519 21:53:46.614"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:46.616" endtime="20220519 21:53:46.652"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:46.653" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220519 21:53:46.652" endtime="20220519 21:53:46.778"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.615" endtime="20220519 21:53:46.779"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.614" endtime="20220519 21:53:46.779"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:46.780" endtime="20220519 21:53:46.813"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:46.813" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220519 21:53:46.813" endtime="20220519 21:53:48.834"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.780" endtime="20220519 21:53:48.834"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.779" endtime="20220519 21:53:48.834"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:46.380" endtime="20220519 21:53:48.834"/>
+</kw>
+<kw name="Child Menu Click" library="CommonAdminKW">
+<arg>Category</arg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${checkMenuProduct}</var>
+<arg>${menuProduct}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:48.926" level="INFO">${checkMenuProduct} = Products</msg>
+<status status="PASS" starttime="20220519 21:53:48.836" endtime="20220519 21:53:48.926"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${checkMenuProduct}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 21:53:48.927" level="INFO">Products</msg>
+<status status="PASS" starttime="20220519 21:53:48.926" endtime="20220519 21:53:48.927"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${menuProduct}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:48.929" endtime="20220519 21:53:48.978"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:48.979" level="INFO">Clicking element 'xpath://span[normalize-space()='Products']'.</msg>
+<status status="PASS" starttime="20220519 21:53:48.979" endtime="20220519 21:53:49.077"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:48.928" endtime="20220519 21:53:49.078"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${child}</var>
+<arg>xpath://span[normalize-space()='${menuChild}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220519 21:53:49.079" level="INFO">${child} = xpath://span[normalize-space()='Category']</msg>
+<status status="PASS" starttime="20220519 21:53:49.078" endtime="20220519 21:53:49.079"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${child}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 21:53:49.079" endtime="20220519 21:53:49.391"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 21:53:49.393" level="INFO">Clicking element 'xpath://span[normalize-space()='Category']'.</msg>
+<status status="PASS" starttime="20220519 21:53:49.392" endtime="20220519 21:53:50.393"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:49.079" endtime="20220519 21:53:50.394"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220519 21:53:50.474" level="INFO">${curURL} = https://ecommerce.anhtester.com/admin/categories</msg>
+<status status="PASS" starttime="20220519 21:53:50.396" endtime="20220519 21:53:50.475"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 21:53:50.475" endtime="20220519 21:53:50.476"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:50.394" endtime="20220519 21:53:50.477"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:48.835" endtime="20220519 21:53:50.478"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220519 21:53:50.479" endtime="20220519 21:53:53.044"/>
+</kw>
+<status status="PASS" starttime="20220519 21:53:50.478" endtime="20220519 21:53:53.045"/>
+</kw>
+<doc>User click on 'Category' in the menu</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220519 21:53:37.780" endtime="20220519 21:53:53.046"/>
+</test>
+<status status="PASS" starttime="20220519 21:51:23.584" endtime="20220519 21:53:53.053"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="10" fail="0" skip="0">Positive</stat>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="CommonAdminPageTC">CommonAdminPageTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

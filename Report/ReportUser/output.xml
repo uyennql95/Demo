@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220520 17:03:15.568" rpa="false" schemaversion="3">
+<suite id="s1" name="UserPageTC" source="D:\Fsoft\Robot Excercise\Assignment_Web_AUT_Group2\Assignment_Web_AUT_Group2\TestCases\UserPageTC\UserPageTC.robot">
+<test id="s1-t1" name="TC1" line="10">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:03:16.086" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:03:16.086" endtime="20220520 17:03:22.970"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:03:22.970" endtime="20220520 17:03:23.489"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:16.085" endtime="20220520 17:03:23.490"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:03:23.877" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:03:23.492" endtime="20220520 17:03:23.877"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:23.879" endtime="20220520 17:03:24.010"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:24.010" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:03:24.010" endtime="20220520 17:03:24.146"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:23.877" endtime="20220520 17:03:24.146"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:23.491" endtime="20220520 17:03:24.146"/>
+</kw>
+<kw name="Enter Text In Search" library="CommonUserKW">
+<arg>tủ lạnh</arg>
+<kw name="Input For Text" library="common">
+<arg>${SearchTxt}</arg>
+<arg>${textlInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:24.151" endtime="20220520 17:03:24.238"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:24.239" level="INFO">Typing text 'tủ lạnh' into text field 'xpath://input[@id='search']'.</msg>
+<status status="PASS" starttime="20220520 17:03:24.239" endtime="20220520 17:03:24.399"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:24.149" endtime="20220520 17:03:24.400"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:24.148" endtime="20220520 17:03:24.400"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:03:26.412" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:03:24.403" endtime="20220520 17:03:26.412"/>
+</kw>
+<kw name="Click On Button Search" library="CommonUserKW">
+<kw name="Click For Element" library="common">
+<arg>${SearchBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:26.415" endtime="20220520 17:03:26.466"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:26.467" level="INFO">Clicking element 'xpath://div[@class='input-group-append d-none d-lg-block']//button'.</msg>
+<status status="PASS" starttime="20220520 17:03:26.466" endtime="20220520 17:03:27.648"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:26.414" endtime="20220520 17:03:27.649"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:26.413" endtime="20220520 17:03:27.649"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220520 17:03:27.669" level="INFO">${curURL} = https://ecommerce.anhtester.com/search?keyword=t%E1%BB%A7+l%E1%BA%A1nh</msg>
+<status status="PASS" starttime="20220520 17:03:27.651" endtime="20220520 17:03:27.669"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220520 17:03:27.670" endtime="20220520 17:03:27.671"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:27.650" endtime="20220520 17:03:27.671"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:03:29.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:03:27.674" endtime="20220520 17:03:29.675"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:03:29.675" endtime="20220520 17:03:32.164"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:27.673" endtime="20220520 17:03:32.165"/>
+</kw>
+<doc>Search with click input text</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:03:16.083" endtime="20220520 17:03:32.167"/>
+</test>
+<test id="s1-t2" name="TC2" line="19">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:03:32.178" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:03:32.176" endtime="20220520 17:03:38.512"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:03:38.513" endtime="20220520 17:03:38.654"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:32.175" endtime="20220520 17:03:38.654"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:03:38.697" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:03:38.657" endtime="20220520 17:03:38.697"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:38.698" endtime="20220520 17:03:39.086"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:39.087" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:03:39.086" endtime="20220520 17:03:39.692"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:38.698" endtime="20220520 17:03:39.692"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:38.655" endtime="20220520 17:03:39.692"/>
+</kw>
+<kw name="Enter Text In Search" library="CommonUserKW">
+<arg>tủ lạnh</arg>
+<kw name="Input For Text" library="common">
+<arg>${SearchTxt}</arg>
+<arg>${textlInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:39.696" endtime="20220520 17:03:39.782"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:39.783" level="INFO">Typing text 'tủ lạnh' into text field 'xpath://input[@id='search']'.</msg>
+<status status="PASS" starttime="20220520 17:03:39.782" endtime="20220520 17:03:39.955"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:39.694" endtime="20220520 17:03:39.956"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:39.693" endtime="20220520 17:03:39.956"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:03:41.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:03:39.958" endtime="20220520 17:03:41.972"/>
+</kw>
+<kw name="PK Search Keyboard" library="CommonUserKW">
+<kw name="PressKeys Enter" library="common">
+<arg>${SearchBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:41.978" endtime="20220520 17:03:42.052"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220520 17:03:42.053" level="INFO">Sending key(s) ('RETURN',) to xpath://div[@class='input-group-append d-none d-lg-block']//button element.</msg>
+<msg timestamp="20220520 17:03:43.369" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220520 17:03:43.369" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220520 17:03:42.053" endtime="20220520 17:03:43.380"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:41.976" endtime="20220520 17:03:43.380"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:41.974" endtime="20220520 17:03:43.381"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220520 17:03:43.389" level="INFO">${curURL} = https://ecommerce.anhtester.com/search?keyword=t%E1%BB%A7+l%E1%BA%A1nh</msg>
+<status status="PASS" starttime="20220520 17:03:43.382" endtime="20220520 17:03:43.390"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220520 17:03:43.390" endtime="20220520 17:03:43.391"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:43.381" endtime="20220520 17:03:43.392"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:03:45.402" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:03:43.394" endtime="20220520 17:03:45.402"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:03:45.403" endtime="20220520 17:03:49.635"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:43.393" endtime="20220520 17:03:49.636"/>
+</kw>
+<doc>Search with click PressKey</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:03:32.172" endtime="20220520 17:03:49.637"/>
+</test>
+<test id="s1-t3" name="TC3" line="28">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:03:49.650" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:03:49.648" endtime="20220520 17:03:56.537"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:03:56.538" endtime="20220520 17:03:56.678"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:49.646" endtime="20220520 17:03:56.678"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:03:56.831" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:03:56.683" endtime="20220520 17:03:56.831"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:56.833" endtime="20220520 17:03:57.140"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:57.141" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:03:57.141" endtime="20220520 17:03:57.767"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:56.832" endtime="20220520 17:03:57.768"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:56.682" endtime="20220520 17:03:57.768"/>
+</kw>
+<kw name="Verify Button Compare" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CompareBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:03:57.797" level="INFO">Current page contains element 'xpath://span[contains(text(),'Compare')]'.</msg>
+<status status="PASS" starttime="20220520 17:03:57.769" endtime="20220520 17:03:57.797"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${CompareBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:03:57.798" endtime="20220520 17:03:57.845"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:03:57.846" level="INFO">Clicking element 'xpath://span[contains(text(),'Compare')]'.</msg>
+<status status="PASS" starttime="20220520 17:03:57.846" endtime="20220520 17:03:58.608"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:57.797" endtime="20220520 17:03:58.608"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:57.769" endtime="20220520 17:03:58.609"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:04:00.623" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:03:58.611" endtime="20220520 17:04:00.623"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:04:00.624" endtime="20220520 17:04:03.066"/>
+</kw>
+<status status="PASS" starttime="20220520 17:03:58.610" endtime="20220520 17:04:03.067"/>
+</kw>
+<doc>Verify and click on button 'Compare'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:03:49.643" endtime="20220520 17:04:03.067"/>
+</test>
+<test id="s1-t4" name="TC4" line="34">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:04:03.071" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:04:03.071" endtime="20220520 17:04:08.760"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:04:08.760" endtime="20220520 17:04:08.903"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:03.070" endtime="20220520 17:04:08.904"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:08.985" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:04:08.906" endtime="20220520 17:04:08.985"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:08.987" endtime="20220520 17:04:09.705"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:09.706" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:04:09.705" endtime="20220520 17:04:09.909"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:08.986" endtime="20220520 17:04:09.910"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:08.905" endtime="20220520 17:04:09.910"/>
+</kw>
+<kw name="Verify Button Wishlist" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${WishlistBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:09.954" level="INFO">Current page contains element 'xpath://span[normalize-space()='Wishlist']'.</msg>
+<status status="PASS" starttime="20220520 17:04:09.912" endtime="20220520 17:04:09.954"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${WishlistBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:09.955" endtime="20220520 17:04:09.994"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:09.994" level="INFO">Clicking element 'xpath://span[normalize-space()='Wishlist']'.</msg>
+<status status="PASS" starttime="20220520 17:04:09.994" endtime="20220520 17:04:10.929"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:09.954" endtime="20220520 17:04:10.930"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:09.911" endtime="20220520 17:04:10.930"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:04:12.934" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:04:10.932" endtime="20220520 17:04:12.935"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:04:12.935" endtime="20220520 17:04:15.266"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:10.931" endtime="20220520 17:04:15.267"/>
+</kw>
+<doc>Verify and click on button 'Wishlist'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:04:03.070" endtime="20220520 17:04:15.268"/>
+</test>
+<test id="s1-t5" name="TC5" line="40">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:04:15.281" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:04:15.279" endtime="20220520 17:04:20.866"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:04:20.866" endtime="20220520 17:04:21.040"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:15.277" endtime="20220520 17:04:21.041"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:21.321" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:04:21.046" endtime="20220520 17:04:21.321"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:21.322" endtime="20220520 17:04:21.480"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:21.480" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:04:21.480" endtime="20220520 17:04:22.040"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:21.321" endtime="20220520 17:04:22.041"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:21.045" endtime="20220520 17:04:22.041"/>
+</kw>
+<kw name="Verify Button Cart" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CartBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:22.119" level="INFO">Current page contains element 'xpath://span[contains(text(),'Cart')]'.</msg>
+<status status="PASS" starttime="20220520 17:04:22.043" endtime="20220520 17:04:22.120"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${CartBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:22.121" endtime="20220520 17:04:22.195"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:22.196" level="INFO">Clicking element 'xpath://span[contains(text(),'Cart')]'.</msg>
+<status status="PASS" starttime="20220520 17:04:22.195" endtime="20220520 17:04:22.289"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:22.120" endtime="20220520 17:04:22.289"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:22.042" endtime="20220520 17:04:22.290"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:04:24.308" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:04:22.292" endtime="20220520 17:04:24.309"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:04:24.310" endtime="20220520 17:04:26.633"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:22.291" endtime="20220520 17:04:26.634"/>
+</kw>
+<doc>Verify and click on button 'Cart'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:04:15.274" endtime="20220520 17:04:26.636"/>
+</test>
+<test id="s1-t6" name="TC6" line="46">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:04:26.647" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:04:26.646" endtime="20220520 17:04:33.503"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:04:33.503" endtime="20220520 17:04:33.800"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:26.644" endtime="20220520 17:04:33.800"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:33.938" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:04:33.802" endtime="20220520 17:04:33.939"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:33.939" endtime="20220520 17:04:34.507"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:34.508" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:04:34.507" endtime="20220520 17:04:34.760"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:33.939" endtime="20220520 17:04:34.760"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:33.801" endtime="20220520 17:04:34.760"/>
+</kw>
+<kw name="MenuClick" library="CommonUserKW">
+<arg>Flash deals</arg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${checkMenuFlashSale}</var>
+<arg>${FlashSaleBtn}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:34.823" level="INFO">${checkMenuFlashSale} = Flash Sale</msg>
+<status status="PASS" starttime="20220520 17:04:34.762" endtime="20220520 17:04:34.823"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${checkMenuFlashSale}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220520 17:04:34.824" level="INFO">Flash Sale</msg>
+<status status="PASS" starttime="20220520 17:04:34.824" endtime="20220520 17:04:34.824"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${FlashSaleBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:34.826" endtime="20220520 17:04:34.860"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:34.860" level="INFO">Clicking element 'xpath://a[contains(text(),'Flash Sale')]'.</msg>
+<status status="PASS" starttime="20220520 17:04:34.860" endtime="20220520 17:04:35.566"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:34.824" endtime="20220520 17:04:35.566"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ChildMenuBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:35.567" endtime="20220520 17:04:35.617"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:35.618" level="INFO">Clicking element 'xpath://a[normalize-space()='"Flash deals"']'.</msg>
+<status status="PASS" starttime="20220520 17:04:35.617" endtime="20220520 17:04:36.358"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:35.566" endtime="20220520 17:04:36.358"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220520 17:04:36.365" level="INFO">${curURL} = https://ecommerce.anhtester.com/flash-deals</msg>
+<status status="PASS" starttime="20220520 17:04:36.359" endtime="20220520 17:04:36.365"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220520 17:04:36.366" endtime="20220520 17:04:36.366"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:36.358" endtime="20220520 17:04:36.367"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:34.761" endtime="20220520 17:04:36.367"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:04:38.384" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:04:36.368" endtime="20220520 17:04:38.384"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:04:38.385" endtime="20220520 17:04:40.722"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:36.368" endtime="20220520 17:04:40.723"/>
+</kw>
+<doc>Click on Flash Sale in the menu</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:04:26.641" endtime="20220520 17:04:40.724"/>
+</test>
+<test id="s1-t7" name="TC7" line="52">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:04:40.739" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:04:40.737" endtime="20220520 17:04:46.638"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:04:46.638" endtime="20220520 17:04:46.784"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:40.735" endtime="20220520 17:04:46.785"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:46.851" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:04:46.788" endtime="20220520 17:04:46.851"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:46.853" endtime="20220520 17:04:47.670"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:47.671" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:04:47.670" endtime="20220520 17:04:47.797"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:46.852" endtime="20220520 17:04:47.797"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:46.787" endtime="20220520 17:04:47.798"/>
+</kw>
+<kw name="Verify Button Logout" library="CommonUserKW">
+<kw name="Go To" library="Selenium2Library">
+<arg>https://ecommerce.anhtester.com/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220520 17:04:47.801" level="INFO">Opening url 'https://ecommerce.anhtester.com/login'</msg>
+<status status="PASS" starttime="20220520 17:04:47.801" endtime="20220520 17:04:48.981"/>
+</kw>
+<kw name="Login Successful" library="common">
+<arg>minhduong.lt2001@gmail.com</arg>
+<arg>123456</arg>
+<kw name="Enter Email" library="LoginKW">
+<arg>${emailInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${emailTxt}</arg>
+<arg>${emailInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:48.986" endtime="20220520 17:04:49.034"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:49.035" level="INFO">Typing text 'minhduong.lt2001@gmail.com' into text field 'xpath:(//input[@name='email'])[1]'.</msg>
+<status status="PASS" starttime="20220520 17:04:49.035" endtime="20220520 17:04:49.205"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:48.984" endtime="20220520 17:04:49.205"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:48.982" endtime="20220520 17:04:49.205"/>
+</kw>
+<kw name="Enter Password" library="LoginKW">
+<arg>${passwordInput}</arg>
+<kw name="Input For Text" library="common">
+<arg>${passwordTxt}</arg>
+<arg>${passwordInput}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:49.207" endtime="20220520 17:04:49.241"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:49.242" level="INFO">Typing text '123456' into text field 'xpath://input[@id='password']'.</msg>
+<status status="PASS" starttime="20220520 17:04:49.242" endtime="20220520 17:04:49.366"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:49.206" endtime="20220520 17:04:49.366"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:49.205" endtime="20220520 17:04:49.366"/>
+</kw>
+<kw name="Click On Button Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${loginBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:49.368" endtime="20220520 17:04:49.398"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:49.399" level="INFO">Clicking element 'xpath://button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20220520 17:04:49.399" endtime="20220520 17:04:50.900"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:49.367" endtime="20220520 17:04:50.901"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:49.367" endtime="20220520 17:04:50.901"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:48.981" endtime="20220520 17:04:50.901"/>
+</kw>
+<kw name="Verify Icon Browser Website" library="CommonAdminKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${browserBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:04:50.960" level="INFO">Current page contains element 'xpath://a[@title='Browse Website']'.</msg>
+<status status="PASS" starttime="20220520 17:04:50.904" endtime="20220520 17:04:50.960"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${browserBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:04:50.962" endtime="20220520 17:04:51.098"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:51.100" level="INFO">Clicking element 'xpath://a[@title='Browse Website']'.</msg>
+<status status="PASS" starttime="20220520 17:04:51.099" endtime="20220520 17:04:51.226"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:50.960" endtime="20220520 17:04:51.226"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:50.902" endtime="20220520 17:04:51.227"/>
+</kw>
+<kw name="Switch Window" library="Selenium2Library">
+<arg>url:https://ecommerce.anhtester.com/</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220520 17:04:51.227" endtime="20220520 17:04:53.296"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${LogOutBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:04:53.298" level="INFO">Clicking element 'xpath://li[@class='list-inline-item mr-3 border-right border-left-0 pr-3 pl-0']//a'.</msg>
+<status status="PASS" starttime="20220520 17:04:53.297" endtime="20220520 17:04:54.875"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:47.800" endtime="20220520 17:04:54.875"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:04:56.883" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:04:54.880" endtime="20220520 17:04:56.883"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:04:56.883" endtime="20220520 17:04:59.257"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:54.879" endtime="20220520 17:04:59.258"/>
+</kw>
+<doc>Verify button 'My Logout'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:04:40.731" endtime="20220520 17:04:59.260"/>
+</test>
+<test id="s1-t8" name="TC8" line="58">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:04:59.274" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:04:59.272" endtime="20220520 17:05:06.274"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:05:06.274" endtime="20220520 17:05:06.549"/>
+</kw>
+<status status="PASS" starttime="20220520 17:04:59.269" endtime="20220520 17:05:06.549"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:05:06.677" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:05:06.553" endtime="20220520 17:05:06.677"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:06.678" endtime="20220520 17:05:07.183"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:07.184" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:05:07.183" endtime="20220520 17:05:07.392"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:06.677" endtime="20220520 17:05:07.392"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:06.552" endtime="20220520 17:05:07.393"/>
+</kw>
+<kw name="Enter Email In Subsribe" library="CommonUserKW">
+<arg>abc@gmail.com</arg>
+<kw name="Input For Text" library="common">
+<arg>${EmailTxt}</arg>
+<arg>${EmailTxt}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:07.396" endtime="20220520 17:05:07.439"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:07.440" level="INFO">Typing text 'xpath:(//input[@name='email'])[1]' into text field 'xpath:(//input[@name='email'])[1]'.</msg>
+<status status="PASS" starttime="20220520 17:05:07.439" endtime="20220520 17:05:07.706"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:07.395" endtime="20220520 17:05:07.706"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:07.394" endtime="20220520 17:05:07.707"/>
+</kw>
+<kw name="Click on button Subscribe" library="CommonUserKW">
+<kw name="Click For Element" library="common">
+<arg>${SubBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:07.710" endtime="20220520 17:05:07.743"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:07.744" level="INFO">Clicking element 'xpath://button[normalize-space()='Subscribe']'.</msg>
+<status status="PASS" starttime="20220520 17:05:07.744" endtime="20220520 17:05:07.820"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:07.710" endtime="20220520 17:05:07.821"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:07.709" endtime="20220520 17:05:07.821"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220520 17:05:07.831" level="INFO">${curURL} = https://ecommerce.anhtester.com/</msg>
+<status status="PASS" starttime="20220520 17:05:07.824" endtime="20220520 17:05:07.832"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220520 17:05:07.832" endtime="20220520 17:05:07.833"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:07.823" endtime="20220520 17:05:07.833"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:05:09.842" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:05:07.835" endtime="20220520 17:05:09.843"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:05:09.843" endtime="20220520 17:05:12.151"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:07.834" endtime="20220520 17:05:12.152"/>
+</kw>
+<doc>User enter vaild email in ' Subscribe'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:04:59.265" endtime="20220520 17:05:12.153"/>
+</test>
+<test id="s1-t9" name="TC9" line="66">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:05:12.167" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:05:12.165" endtime="20220520 17:05:17.787"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:05:17.788" endtime="20220520 17:05:17.940"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:12.163" endtime="20220520 17:05:17.941"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:05:17.970" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:05:17.944" endtime="20220520 17:05:17.970"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:17.972" endtime="20220520 17:05:18.312"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:18.313" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:05:18.312" endtime="20220520 17:05:18.456"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:17.971" endtime="20220520 17:05:18.457"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:17.943" endtime="20220520 17:05:18.457"/>
+</kw>
+<kw name="Enter Email In Subsribe" library="CommonUserKW">
+<arg>abc</arg>
+<kw name="Input For Text" library="common">
+<arg>${EmailTxt}</arg>
+<arg>${EmailTxt}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:18.462" endtime="20220520 17:05:18.838"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:18.840" level="INFO">Typing text 'xpath:(//input[@name='email'])[1]' into text field 'xpath:(//input[@name='email'])[1]'.</msg>
+<status status="PASS" starttime="20220520 17:05:18.839" endtime="20220520 17:05:19.325"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:18.461" endtime="20220520 17:05:19.325"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:18.459" endtime="20220520 17:05:19.326"/>
+</kw>
+<kw name="Click on button Subscribe" library="CommonUserKW">
+<kw name="Click For Element" library="common">
+<arg>${SubBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:19.329" endtime="20220520 17:05:19.370"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:19.371" level="INFO">Clicking element 'xpath://button[normalize-space()='Subscribe']'.</msg>
+<status status="PASS" starttime="20220520 17:05:19.370" endtime="20220520 17:05:19.457"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:19.328" endtime="20220520 17:05:19.458"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:19.327" endtime="20220520 17:05:19.458"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="Selenium2Library">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220520 17:05:19.469" level="INFO">${curURL} = https://ecommerce.anhtester.com/</msg>
+<status status="PASS" starttime="20220520 17:05:19.459" endtime="20220520 17:05:19.469"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220520 17:05:19.469" endtime="20220520 17:05:19.470"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:19.459" endtime="20220520 17:05:19.471"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:05:21.483" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:05:19.473" endtime="20220520 17:05:21.483"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:05:21.483" endtime="20220520 17:05:23.777"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:19.472" endtime="20220520 17:05:23.778"/>
+</kw>
+<doc>User enter invaild email in ' Subscribe'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:05:12.159" endtime="20220520 17:05:23.780"/>
+</test>
+<test id="s1-t10" name="TC10" line="74">
+<kw name="Open My Browser" library="CommonUserKW" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${UserURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:05:23.792" level="INFO">Opening browser 'chrome' to base url 'https://ecommerce.anhtester.com/'.</msg>
+<status status="PASS" starttime="20220520 17:05:23.790" endtime="20220520 17:05:30.079"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220520 17:05:30.079" endtime="20220520 17:05:30.222"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:23.789" endtime="20220520 17:05:30.223"/>
+</kw>
+<kw name="Verify Popup" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${CheckPopup}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:05:30.779" level="INFO">Current page contains element 'xpath://div[@class='aiz-editor-data']//p//img'.</msg>
+<status status="PASS" starttime="20220520 17:05:30.226" endtime="20220520 17:05:30.779"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ClosePop}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:30.780" endtime="20220520 17:05:31.096"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:31.096" level="INFO">Clicking element 'xpath://i[@class='la la-close fs-20']'.</msg>
+<status status="PASS" starttime="20220520 17:05:31.096" endtime="20220520 17:05:31.203"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:30.779" endtime="20220520 17:05:31.203"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:30.225" endtime="20220520 17:05:31.204"/>
+</kw>
+<kw name="Verify button Apply now" library="CommonUserKW">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${ApplyBtn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220520 17:05:31.248" level="INFO">Current page contains element 'xpath://a[contains(text(),'Apply Now')]'.</msg>
+<status status="PASS" starttime="20220520 17:05:31.206" endtime="20220520 17:05:31.248"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${ApplyBtn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220520 17:05:31.249" endtime="20220520 17:05:31.296"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:05:31.296" level="INFO">Clicking element 'xpath://a[contains(text(),'Apply Now')]'.</msg>
+<status status="PASS" starttime="20220520 17:05:31.296" endtime="20220520 17:05:32.562"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:31.248" endtime="20220520 17:05:32.563"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:31.205" endtime="20220520 17:05:32.563"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:05:34.578" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220520 17:05:32.566" endtime="20220520 17:05:34.578"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220520 17:05:34.578" endtime="20220520 17:05:36.953"/>
+</kw>
+<status status="PASS" starttime="20220520 17:05:32.565" endtime="20220520 17:05:36.954"/>
+</kw>
+<doc>Verify and click on button 'Apply Now'</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20220520 17:05:23.786" endtime="20220520 17:05:36.954"/>
+</test>
+<doc>Test Case Common User Page</doc>
+<status status="PASS" starttime="20220520 17:03:15.573" endtime="20220520 17:05:36.958"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="10" fail="0" skip="0">Positive</stat>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="UserPageTC">UserPageTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
