@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       Test Case Common User Page
-Library             Selenium2Library
+Library             SeleniumLibrary
 Resource            ../../PageObjects/UserPage/CommonUserPage/CommonUserKW.robot
 Resource            ../../PageObjects/Common/common.robot
 Variables           ../../PageObjects/UserPage/CommonUserPage/CommonUserUI.py

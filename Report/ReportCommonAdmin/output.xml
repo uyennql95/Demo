@@ -59,10 +59,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -227,10 +227,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -400,10 +400,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -561,10 +561,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -713,10 +713,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -867,10 +867,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -1021,10 +1021,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -1172,10 +1172,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -1370,10 +1370,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -1568,10 +1568,10 @@
 <arg>tienthanhxh2000@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>

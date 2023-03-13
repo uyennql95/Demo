@@ -1,5 +1,5 @@
 *** Settings ***
-Library         Selenium2Library
+Library         SeleniumLibrary
 Variables       CommonAdminUI.py
 Resource        ../../Common/common.robot
 
@@ -25,10 +25,10 @@ Verify Button Clear Cache
     ${cacheCheck}=     Get Text     ${cacheTxt}
     Log                             ${cacheCheck}
 
-Verify Flag
-    common.Click For Element        ${flagIcon}
-    ${icon}=   Get Element Count    ${flag}
-    Log                             ${icon}
+# Verify Flag
+#     common.Click For Element        ${flagIcon}
+#     ${icon}=   Get Element Count    ${flag}
+#     Log                             ${icon}
 
 Verify 12 Product
     Page Should Contain Element     ${productCheck}

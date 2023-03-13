@@ -641,10 +641,10 @@
 <arg>minhduong.lt2001@gmail.com</arg>
 <arg>123456</arg>
 <kw name="Enter Email" library="LoginKW">
-<arg>${emailInput}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Input For Text" library="common">
-<arg>${emailTxt}</arg>
-<arg>${emailInput}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameInput}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -798,8 +798,8 @@
 <kw name="Enter Email In Subsribe" library="CommonUserKW">
 <arg>abc@gmail.com</arg>
 <kw name="Input For Text" library="common">
-<arg>${EmailTxt}</arg>
-<arg>${EmailTxt}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameTxt}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -907,8 +907,8 @@
 <kw name="Enter Email In Subsribe" library="CommonUserKW">
 <arg>abc</arg>
 <kw name="Input For Text" library="common">
-<arg>${EmailTxt}</arg>
-<arg>${EmailTxt}</arg>
+<arg>${userNameTxt}</arg>
+<arg>${userNameTxt}</arg>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>

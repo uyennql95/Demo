@@ -1,5 +1,5 @@
 *** Setting ***
-Library   Selenium2Library
+Library   Selenium
 Resource  ../../../PageObjects/AdminPage/CategoryPage/CategoryKW.robot
 Resource  ../../../PageObjects/Common/common.robot
 Test Setup      CategoryKW.Set Up PreCondition CategoryPage
