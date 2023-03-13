@@ -1,5 +1,5 @@
 *** Settings ***
-Library     Selenium2Library
+Library     SeleniumLibrary
 Resource    ../../../PageObjects/Common/common.robot
 Variables   CategoryUI.py
 

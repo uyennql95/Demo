@@ -1,24 +1,27 @@
 *** Settings ***
-Library     Selenium2Library
-Resource    LoginPage/LoginKW.robot
+Library     SeleniumLibrary
+Library     ../../CustomLibrary/CustomLibrary.py
+Library    ../../Demo/lib/site-packages/robot/libraries/Collections.py
+Resource    ../LoginPage/LoginKW.robot
 
 *** Variables ***
-${URL}          https://ecommerce.anhtester.com/login
+${URL}          https://dev.accretech-nxgs-fe.aris-vn.com/
 
 *** Keywords ***
 Open My Browser
     ${options}=    Evaluate
 ...     sys.modules['selenium.webdriver'].ChromeOptions()
 ...     sys, selenium.webdriver
-    Call Method    ${options}       add_extension  ${CURDIR}/../../Extension/ublock.crx
+    Call Method   ${options}        add_extension  ${CURDIR}/../../CustomLibrary/ublock.crx
     Create WebDriver    Chrome      chrome_options=${options}
     Go To          ${URL}
     Maximize Browser Window
     Verify Current URL
+    
 
 Close My Browser
     Sleep  2s
-    Close All Browsers
+    Close Browser
 
 Click For Element
     [Arguments]                         ${element}
@@ -30,23 +33,15 @@ Input For Text
     Wait Until Element Is Visible       ${element}
     Input Text                          ${element}      ${input}
 
-PressKeys Tab
-    [Arguments]                         ${element}      ${input}
-    Click For Element                   ${element}
-    Press Keys                          ${element}      ${input}      TAB
-
-PressKeys Enter
-    [Arguments]                         ${element}
-    Wait Until Element Is Visible       ${element}
-    Press Keys                          ${element}      RETURN
-
-Login Successful
-    [Arguments]                         ${emailInput}   ${passwordInput}
-    LoginKW.Enter Email                 ${emailInput}
-    LoginKW.Enter Password              ${passwordInput}
-    LoginKW.Click On Button Login
-
 Verify Current URL
     ${curURL}=                          Get Location
     Log To Console                      ${curURL}
     [Return]                            ${curURL}
+
+Get Text From Text Box
+    [Arguments]                         ${element}
+    Wait Until Element Is Visible       ${element}
+    ${text}=    Get Text                ${element}
+    [Return]    ${text}
+
+   

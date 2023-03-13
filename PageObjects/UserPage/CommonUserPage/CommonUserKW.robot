@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       Header Ecommerces Anhtester
-Library             Selenium2Library
+Library             SeleniumLibrary
 Variables           CommonUserUI.py
 Resource            ../../Common/common.robot
 Resource            ../../AdminPage/CommonAdminPage/CommonAdminKW.robot
@@ -40,7 +40,7 @@ MenuClick
 
 Enter Email In Subsribe
     [Arguments]                         ${email1lInput}
-    common.Input For Text               ${emailTxt}         ${emailTxt}
+    common.Input For Text               ${userNameTxt}         ${userNameTxt}
 
 Click on button Subscribe
     common.Click For Element            ${subBtn}
